@@ -1,0 +1,38 @@
+Lab Exercise: Wealth & Age Calculator
+
+Objective: Practice reading standard input, choosing appropriate primitive data types, performing basic arithmetic operations, and calculating power increments.
+
+Exercise Requirements
+
+Write a Java program that collects a user's details and projects their age and financial growth at retirement age (assume retirement age is 67).
+
+    Prompt for Input:
+        User's full name (Text string)
+        User's current year of birth (Whole number, e.g., 2005)
+        User's current net worth in Euros and cents (Decimal number, e.g., 1250.75)
+    Perform Calculations:
+        Current Age: Subtract the birth year from the current year ().
+        Years to Retirement: Subtract current age from .
+        Retirement Wealth: Calculate expected wealth assuming net worth doubles every single year until retirement.
+
+    Output Summary: Display a summary showing their calculated current age, years left until retirement, and estimated retirement wealth formatted to two decimal places.
+
+Expected Output Example
+
+Plaintext
+
+Enter your full name: Alex Smith
+
+Enter your birth year: 2005
+
+Enter your net worth in Euros (€): 1500.50
+
+ 
+
+--- Summary for Alex Smith ---
+
+Current Age: 21
+
+Years to Retirement (age 67): 46
+
+Projected Wealth at Retirement: €105,584,242,504,564,736.00
