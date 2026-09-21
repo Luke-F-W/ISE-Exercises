@@ -1,0 +1,5 @@
+Add age validation to the sample student class
+When you print out the object information add a line stating if the person is a legal adult or not
+if the students GPA is between 0 and 2 add a line that says the "need improvment"
+if the students GPA is between 2 and 3 add a line that says the "good work"
+if the students GPA is between 3 and 4 add a line that says the "Excellent"
