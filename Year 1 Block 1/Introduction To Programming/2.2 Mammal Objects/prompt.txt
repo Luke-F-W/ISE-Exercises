@@ -1,0 +1,6 @@
+Add a attribute that allows you to record if the animal is a mammal or not (with appropriate get and set methods)
+Create a new constructor that allows you to set an animals weight
+Write get and set methods for an animals weight
+write a method in the animal class that displays all the attributes of the animal, make to state if the animal is a mammal or not e.g.
+
+"Is a mammal" or "is not a mammal"
