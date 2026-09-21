@@ -1,0 +1,59 @@
+Lab Exercise: Drawing ASCII Triangles with Nested Loops
+
+Objective
+
+In this exercise, you will build a Java console program that prints geometric shapes made of text characters (ASCII art). You will use nested for loops to control the layout of rows and columns.
+
+Key Requirements
+
+    User Input: Prompt the user to enter an integer representing the height of the triangle (e.g., between 1 and 20).
+    Outer Loop (Rows): Use an outer for loop to control the current row being printed, running from row 1 up to the user's chosen height.
+    Inner Loop (Columns): Use an inner for loop to print the character (e.g., * or #) across the screen for each row.
+    Pattern Rules:
+        Task A (Right-Angled Triangle): Row 1 has 1 star, Row 2 has 2 stars, Row 3 has 3 stars, and so on up to row .
+        Task B (Centered Pyramid - Extension): Each row must print leading spaces before printing stars so the triangle is centered.
+
+Example Output
+
+Task A: Right-Angled Triangle
+
+Plaintext
+
+Enter triangle height: 5
+
+ 
+
+*
+
+**
+
+***
+
+****
+
+*****
+
+Task B: Centered Pyramid (Extension)
+
+Plaintext
+
+Enter pyramid height: 5
+
+ 
+
+    *
+
+   ***
+
+  *****
+
+ *******
+
+*********
+
+Concepts & Mechanics
+
+    Nested Loop Execution: Remember that for every single iteration of the outer loop, the inner loop runs to completion from start to finish.
+    Line Breaks vs. In-line Printing:
+        System.out.print(...) keeps the cursor on the same line (used by inner loops).
+        System.out.println() moves the cursor to the next line (used by the outer loop after the inner loop finishes).
