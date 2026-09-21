@@ -1,0 +1,63 @@
+Exercise: Build a Bank Account Manager
+
+Objective: Practice object-oriented programming (OOP) fundamentals by creating a custom Java class, and write an interactive menu using control structures (while loop and switch/if-else) with input validation.
+
+Part 1: Requirements
+
+1. Create the BankAccount Class
+
+Create a class named BankAccount with the following:
+
+Private Fields:
+
+accountNumber (String)
+
+accountHolder (String)
+
+balance (double)
+
+ 
+
+Constructor:
+
+Accepts accountNumber, accountHolder, and an initial balance.
+
+Initial balance must be greater than 1 if not display a warning
+
+Methods:
+
+deposit(double amount): Adds money if amount > 0. Prints an error if negative.
+
+withdraw(double amount): Subtracts money if amount > 0 and there are sufficient funds. Prints an error if overdrawn or invalid.
+
+getBalance(): Returns the current balance.
+
+getAccountDetails(): Returns a formatted String with account details.
+
+ 
+
+2. Create the BankDriver Main Program
+
+In a separate class containing your main method:
+
+Instantiate a BankAccount object with mock data.
+
+Display a menu with the following choices:
+
+Plaintext
+
+--- BANK MENU ---
+
+1. Check Balance
+
+2. Deposit
+
+3. Withdraw
+
+4. Account Details
+
+5. Quit
+
+Use a while loop to repeatedly display the menu until the user selects option 5.
+
+Input Validation Requirement: If the user enters an invalid option (e.g., 8 or -1), print an error message and force the loop to display the menu again.
