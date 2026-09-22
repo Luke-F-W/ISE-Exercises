@@ -1,0 +1,7 @@
+Discover if we are LE or BE:
+o Use the C code on the right
+o Check if a byte is high order
+or low order
+
+What is the size of the struct
+my_struct.
