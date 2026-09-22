@@ -1,0 +1,6 @@
+Build "hello world"
+o Open an editor or use cat to create a program that prints your name:
+o Fix any errors that the compiler generates
+o Build it for your architecture and for a foreign architecture
+o Try to run both files
+o Capture the output and submit it to brightspac
