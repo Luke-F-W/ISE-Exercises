@@ -1,0 +1,29 @@
+Exercise: Daily Temperature Analyzer
+
+Objective
+
+Practice declaring, populating, and iterating through 1D arrays in Java, while using the Random class to generate simulated dataset values.
+
+Problem Statement
+
+You are tasked with building a weather data simulator for a local meteorology lab. Your program needs to:
+
+    Generate 30 days of daily high temperatures (ranging from -10°C to 35°C).
+    Store these temperatures in an integer array.
+    Analyze the array to find:
+        The average temperature for the month.
+        The highest and lowest temperatures recorded.
+        The total number of freezing days (temperatures below 0°C).
+
+Instructions
+
+    Import java.util.Random.
+    Declare an integer array of size 30.
+    Use a for loop to fill the array with random integers between -10 and 35 (inclusive).
+        Hint: random.nextInt(46) - 10 generates values in the range .
+    Use a second loop (or combine logic into one loop) to calculate:
+        Sum of all elements (to compute the average).
+        Minimum value.
+        Maximum value.
+        Count of temperatures .
+    Print out the full list of generated temperatures along with the final summary statistics formatted cleanly.
