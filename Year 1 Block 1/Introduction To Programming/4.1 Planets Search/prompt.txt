@@ -1,0 +1,44 @@
+Exercise: Planet Search with Built-in Exceptions
+
+Objective
+
+Practice using a try-catch block and built-in Java exceptions to handle runtime errors gracefully when a user searches for a planet that doesn't exist.
+
+Requirements
+
+    Add a Search Method: In your Main class, write a static method called findPlanetByName(Planet[] planets, String name) that loops through the array. If it finds a matching planet name (case-insensitive), it returns that Planet object. If the loop finishes without finding a match, throw a built-in exception: throw new IllegalArgumentException("Planet not found: " + name);
+    Use a Try-Catch Block in main:
+        Use a Scanner to allow the user to type a planet name in the console.
+        Wrap the call to findPlanetByName inside a try block.
+        Catch the IllegalArgumentException and print a friendly error message to the user instead of letting the program crash.
+        Add a finally block that prints "Search operation finished." regardless of whether the planet was found or not.
+
+ 
+
+Example Interaction
+
+When searching for a valid planet:
+
+ 
+
+Enter a planet to search for: Mars
+
+ 
+
+Found!
+
+Planet: Mars | Radius: 3389.5 km | Distance: 1.52 AU
+
+Search operation finished.
+
+ 
+
+When searching for an invalid planet:
+
+ 
+
+Enter a planet to search for: Krypton
+
+Error: Planet not found: Krypton
+
+Search operation finished.
