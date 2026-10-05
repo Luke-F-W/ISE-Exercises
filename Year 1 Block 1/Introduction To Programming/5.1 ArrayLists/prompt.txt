@@ -1,0 +1,56 @@
+Exercise: Grade Point Average (GPA) Calculator
+
+Objective
+
+Practice writing methods that accept an ArrayList as a parameter and return calculated values or modified lists.
+
+Scenario
+
+A university registrar needs a tool to process student grades stored as numeric scale values (e.g., 4.0, 3.5, 2.8). You will write a Java class that takes a list of grade points, calculates key metrics, and filters out failing grades.
+
+Task Instructions
+
+Create a public Java class named GradeProcessor containing three static methods described below:
+
+Method 1: calculateGPA
+
+    Parameters: An ArrayList<Double> representing grade points.
+    Returns: A double value representing the average of all grades in the list.
+    Rules:
+        If the list is empty, return 0.0 to avoid division by zero.
+        Do not modify the input list.
+
+Method 2: countHonorsGrades
+
+    Parameters: An ArrayList<Double> representing grade points.
+    Returns: An int indicating how many grades in the list are greater than or equal to 3.5.
+    Rules:
+        Loop through the list and count qualifying grades.
+        Do not modify the input list.
+
+Method 3: getPassingGrades
+
+    Parameters: An ArrayList<Double> representing grade points, and a double representing the minimum passing threshold (e.g., 2.0).
+    Returns: A new ArrayList<Double> containing only the grades that meet or exceed the threshold.
+    Rules:
+        Create and return a new ArrayList.
+        Do not modify the original list passed as a parameter.
+
+Method 4: main
+
+    Create an ArrayList<Double> and add 5 to 6 sample grade values.
+    Call all three methods created above, passing your list as an argument.
+    Print the results to the console with clear labels.
+    Use:
+
+            grades.add(4.0);
+            grades.add(3.5);
+            grades.add(2.8);
+            grades.add(1.5);
+            grades.add(3.7);
+            grades.add(2.0);
+
+            System.out.println("GPA: " + calculateGPA(grades));
+            System.out.println("Honors Grades: " + countHonorsGrades(grades));
+            System.out.println("Passing Grades: " + getPassingGrades(grades, 2.0));
+            System.out.println("Original Grades: " + grades);
