@@ -1,0 +1,22 @@
+Practical Exercise: The Battle Simulation
+
+Problem Statement
+
+You are tasked with creating a battle engine for a tactical strategy game. All combat units inherit core attributes from a superclass called Warrior, but each distinct culture executes its special move differently during combat.
+
+Requirements
+
+    Base Class (Warrior):
+        Fields: String name, int health
+        Method: public void performSpecialMove() — prints a default generic attack message.
+        Method: public void displayStats() — prints the warrior's name and remaining health.
+    Subclasses (Celtic, Viking, Kshatriya):
+        Each subclass extends Warrior and provides its own constructor calling super(...).
+        Override performSpecialMove() in each subclass to reflect their historical fighting technique:
+            Celtic: Performs a Woad Berserk Charge dealing high damage.
+            Viking: Executes a Shield Wall Crush with an battle cry.
+            Kshatriya: Unleashes a Dharmic Sword Strike driven by martial honor.
+    Polymorphic Execution (Main):
+        Create a list or array of superclass references: List<Warrior> army = new ArrayList<>().
+        Instantiate one instance of each subclass and store them in the list.
+        Iterate through the list using a loop and trigger performSpecialMove() for each warrior. Observe how Java determines which method implementation to run at runtime.
