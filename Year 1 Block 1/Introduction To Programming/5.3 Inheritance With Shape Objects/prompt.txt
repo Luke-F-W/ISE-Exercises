@@ -1,0 +1,52 @@
+Lab Exercise: 2D & 3D Geometry Hierarchy
+
+Task Overview
+
+Build an object-oriented class system for two-dimensional and three-dimensional geometric shapes using abstract classes, inheritance, and composition. Your program will store a collection of diverse shape instances in an ArrayList and output their properties.
+
+Class & Hierarchy Requirements
+
+    Required Base Classes:
+        An abstract top-level base class for generic shapes.
+        Two intermediate abstract subclasses: one for 2D shapes and one for 3D shapes.
+        Abstract methods must exist to enforce calculation of surface area for all shapes and volume for 3D shapes.
+    Required Concrete Classes:
+        2D Shapes: Square, Rectangle, Triangle, Circle
+        3D Shapes: Cube, Sphere, Cylinder, Pyramid
+    Each shape is required to print its details as below.
+
+Driver Program Requirements
+
+Create a main method that performs the following steps:
+
+    Create an ArrayList capable of holding all shape types polymorphically.
+    Instantiate at least one object for every shape class (Square, Rectangle, Triangle, Circle, Sphere, Cube, Cylinder, Pyramid).
+    Add all shape instances to the ArrayList.
+    Loop through the ArrayList and print:
+        The name of the shape.
+        The surface area (formatted to 2 decimal places).
+        The volume (only if the shape is a 3D shape).
+
+Target Output Format
+
+Plaintext
+
+============================================================
+
+                  GEOMETRY HIERARCHY REPORT                
+
+============================================================
+
+Name: Square          | Surface Area: 16.00 sq units
+
+Name: Rectangle       | Surface Area: 15.00 sq units
+
+Name: Triangle        | Surface Area: 12.00 sq units
+
+Name: Circle          | Surface Area: 28.27 sq units
+
+Name: Sphere          | Surface Area: 113.10 sq units | Volume: 113.10 cu units
+
+Name: Cube            | Surface Area: 54.00 sq units  | Volume: 27.00 cu units
+
+Name: Cube            | Surface Area: 54.00 sq units  | Volume: 27.00 cu units
