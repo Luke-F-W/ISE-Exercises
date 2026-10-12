@@ -1,0 +1,58 @@
+Lab Exercise: The Haunted Java Academy
+Objective
+In this exercise, you will create two Java interfaces and a single class that implements both of them. You will then populate two separate ArrayList objects each typed to one of the interfaces, manipulate their order using zero-based indexing, and print out both lists element by element showing their index positions.
+The order of each list is different although they contain the same objects!
+Step 1: Define the Interfaces
+Create an interface named Spooky:
+Method: void haunt()
+Create an interface named Scary:
+Method: void scare()
+Step 2: Implement the Halloween Class
+Create a class named Monster that implements both the Spooky and Scary interfaces.
+Attributes:
+String name (e.g., "Ghost", "Vampire")
+int scarinessLevel (e.g., 1 to 10)
+Constructor: Initialize name and scarinessLevel.
+Methods:
+Implement haunt() to print: "[name] floats through walls saying: Boo!"
+Implement scare() to print: "[name] jumps out with a Scariness Level of [scarinessLevel]!"
+Override toString() to return: "Monster: [name] (Level [scarinessLevel])"
+Step 3: Create and Reorder the Interface Lists
+In your main method (inside a class named Main or HauntedAcademy):
+Instantiate 3 Monsters:
+Monster 1: "Ghost", Level 3
+Monster 2: "Vampire", Level 8
+Monster 3: "Zombie", Level 5
+Build spookyList (ArrayList<Spooky>):
+Add the three monsters in order of appearance: Ghost, Vampire, Zombie.
+Build scaryList (ArrayList<Scary>):
+Declare ArrayList<Scary> scaryList = new ArrayList<>();
+Insert the same monster references so they are ranked from highest to lowest scariness level (Vampire, Zombie, Ghost).
+Requirement: Use explicit indexing with add(index, element) to place them at specific positions (e.g., placing Zombie at index 1 and Ghost at index 2).
+Step 4: Print Both Lists and Interface Actions
+Write code using standard for loops (using i as the index) to explicitly print both lists and demonstrate interface behavior:
+Print spookyList:
+Iterate using index i from 0 to spookyList.size() - 1.
+Print the index along with the monster's toString() output.
+Call .haunt() on each element.
+Print scaryList:
+Iterate using index i from 0 to scaryList.size() - 1.
+Print the index along with the monster's toString() output.
+Call .scare() on each element.
+Expected Console Output
+When run, your program must produce output matching the following layout:
+Plaintext
+=== Spooky List (Order of Appearance) ===
+Index 0: Monster: Ghost (Level 3)
+  -> Ghost floats through walls saying: Boo!
+Index 1: Monster: Vampire (Level 8)
+  -> Vampire floats through walls saying: Boo!
+Index 2: Monster: Zombie (Level 5)
+  -> Zombie floats through walls saying: Boo!
+=== Scary List (Sorted by Scariness Level) ===
+Index 0: Monster: Vampire (Level 8)
+  -> Vampire jumps out with a Scariness Level of 8!
+Index 1: Monster: Zombie (Level 5)
+  -> Zombie jumps out with a Scariness Level of 5!
+Index 2: Monster: Ghost (Level 3)
+  -> Ghost jumps out with a Scariness Level of 3!
