@@ -1,0 +1,41 @@
+Assignment: Build Your First Robocode Battle-Bot
+
+Overview
+
+In this assignment, you will build a custom tank bot using Robocode, a Java-based programming game where you write code to control a virtual robot in real-time combat. You will practice core Object-Oriented Programming (OOP) concepts, including class inheritance, method overriding, event handling, and simple vector/trigonometric logic. N.B. Robocode has its on API you should use it.
+
+Learning Objectives
+
+By completing this exercise, you will learn to:
+
+    Extend an existing class (Robot) and override event methods.
+    Respond to environmental events using event handlers (e.g., onScannedRobot, onHitWall).
+    Apply basic math/trigonometry concepts to control movement and targeting.
+    Debug dynamic runtime behavior in an interactive simulator.
+
+Requirements
+
+1. General Structure
+
+    Create a new class named (be imaginative!!) that extends Robot.
+    Implement a main execution loop inside the run() method.
+    Organize your code using clean variable names and comments explaining your strategy.
+
+2. Movement & Radar Strategy
+
+    Continuous Scanning: Ensure your radar sweeps continuously to locate enemy bots.
+    Smart Movement: Your bot must not stand still. Implement a movement pattern (e.g., wall-following, square/circle patrolling, or randomized dodging).
+    Wall Avoidance: Handle boundary collisions in onHitWall() so your bot turns away safely instead of repeatedly bumping into walls.
+
+3. Targeting & Firing Logic
+
+    Adaptive Power: Scale your bullet power based on distance—use higher power () for close targets and lower power () for far targets to conserve energy.
+    Target Lock: When an enemy is scanned in onScannedRobot(), turn your gun toward their bearing before firing.
+
+4. Defensive Reaction
+
+    Implement onHitByBullet() to alter your heading or direction whenever you take damage, making your bot harder to hit continuously.
+
+5. Fun
+
+    Change the colour of your bot when yo hit a wall or take a hit.
