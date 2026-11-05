@@ -1,0 +1,11 @@
+Exercise Instructions
+
+Write a Java program that performs the following steps:
+
+    Prints the name and default priority of the main thread.
+
+    Creates a new thread by implementing the Runnable interface
+
+    Changes the priority of the threads to the maximum possible priority (Thread.MAX_PRIORITY).
+
+    Starts the thread, which prints its own name and priority from inside its run() method.
