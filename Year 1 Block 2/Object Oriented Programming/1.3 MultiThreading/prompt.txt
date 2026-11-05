@@ -1,0 +1,24 @@
+Exercise: Dynamic Parallel Range Sum with Thread Pools
+
+Objective
+
+Calculate the sum of all integers from  to  by splitting the range dynamically across  worker threads (where , such as 4, 8, or the available processor core count). Store all thread objects and task instances in lists, start them, wait for all to complete using .join(), and aggregate the results.
+
+Instructions
+
+    Re-use or create the SumTask class implementing Runnable:
+        Keep start (inclusive), end (inclusive), and partialSum (long).
+        Add getter for partialSum.
+    In the main method:
+        Define target  (e.g., 100_000_000L) and number of worker threads  (e.g., 8 or Runtime.getRuntime().availableProcessors()).
+        Compute range chunk size per thread: long chunkSize = N / K.
+        Create two lists:
+            List<SumTask> tasks = new ArrayList<>();
+            List<Thread> threads = new ArrayList<>();
+        Loop  times to instantiate each task and thread:
+            Calculate start and end bounds for chunk .
+            Make sure the final task covers any leftover remainder up to  (end = (i == K - 1) ? N : currentEnd).
+            Add the task and thread to their respective lists.
+        Loop over the threads list to call .start() on each thread.
+        Loop over the threads list to call .join() on each thread.
+        Iterate through tasks to sum all getPartialSum() values and print the total alongside the expected formula result.
