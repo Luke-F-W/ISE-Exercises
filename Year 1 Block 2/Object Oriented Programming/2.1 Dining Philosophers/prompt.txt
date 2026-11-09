@@ -1,0 +1,5 @@
+Practical Lab Exercise: Resolving Deadlock in the Dining Philosophers
+Objective
+Analyze a deadlocking multithreaded Java program, identify the circular wait condition, and resolve the deadlock using a strict lock ordering (resource hierarchy) strategy.
+Background & Code Base
+In a standard 5-philosopher setup where each philosopher attempts to acquire their left fork first, followed by their right fork. Because every thread acquires resources in a relative pattern rather than a global order, running this program leads to a total system freeze (deadlock).
