@@ -1,0 +1,1 @@
+make a c file that prints the sizeof for an int, float, long, char and boolean
