@@ -1,0 +1,21 @@
+Lab Exercise: Iterative vs. Recursive Fibonacci Performance
+
+Objective
+
+In this assignment, you will implement two separate algorithms to calculate the  number in the Fibonacci sequence: one using iteration and the other using recursion. You will then benchmark both implementations to analyze their execution speed, memory behavior, and algorithmic complexity.
+
+Part 1: Implementation Requirements
+
+Create a Java class named FibonacciBenchmark with a main method and two static helper methods. Because Fibonacci numbers grow very quickly, ensure both methods accept an int parameter n and return a long to avoid integer overflow.
+
+    Iterative Method (fibonacciIterative)
+        Calculate the  Fibonacci number using a standard loop (for or while).
+        Handle the base cases ( and ) without entering unnecessary loops.
+        Maintain only the previous two values in memory as you iterate up to n.
+    Recursive Method (fibonacciRecursive)
+        Calculate the  Fibonacci number by having the method call itself.
+        Define clear base cases for n == 0 and n == 1 to terminate the recursion.
+        For any n > 1, return the sum of the two preceding Fibonacci numbers.
+    Call Stack Tracking (After bench mark)
+        Add a static counter variable to track the deepest point the JVM call stack reaches during the recursive execution.
+        Inside your recursive base case, inspect the current thread's stack trace length using Java's Thread API and update your maximum depth tracker whenever a deeper call is reached.
