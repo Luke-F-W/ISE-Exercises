@@ -1,0 +1,116 @@
+Student Exercise: 1-Byte Playing Card Deck
+
+Objective
+
+Build a program that stores an entire 52-card deck in an array of 52 char variables (1 byte per card), shuffles/draws a random 5-card hand without duplicates, and decodes each byte using a union and bitfields.
+
+Memory Layout of a Card (1 Byte = 8 Bits)
+
+Each card is packed into a single unsigned char:
+
+Bits 7–6 (2 bits)
+	
+
+Bits 5–2 (4 bits)
+	
+
+Bits 1–0 (2 bits)
+
+Unused (set to 0)
+	
+
+Rank / Number (1 to 13)
+	
+
+Suit (0 to 3)
+
+(Note: On standard little-endian systems like x86/ARM, bitfields declared first occupy the lowest bits—bits 0–1—moving upward toward bit 7.)
+
+    Suit Encoding (2 bits): 0 = Hearts, 1 = Diamonds, 2 = Clubs, 3 = Spades
+    Rank Encoding (4 bits): 1 = Ace, 2–10 = Number cards, 11 = Jack, 12 = Queen, 13 = King
+
+Starter Code (For Students)
+
+C
+
+#include <stdio.h>
+
+#include <stdlib.h>
+
+#include <time.h>
+
+ 
+
+// TODO 1: Define a union named 'Card' that overlays an 'unsigned char rawByte'
+
+// with a struct of bitfields:
+
+//   - suit   (2 bits)
+
+//   - rank   (4 bits)
+
+//   - unused (2 bits)
+
+ 
+
+ 
+
+// Helper function to print a single card from its raw byte
+
+void printCard(unsigned char rawCard) {
+
+    const char *suits[] = {"Hearts", "Diamonds", "Clubs", "Spades"};
+
+    const char *ranks[] = {
+
+        "Invalid", "Ace", "2", "3", "4", "5", "6", "7",
+
+        "8", "9", "10", "Jack", "Queen", "King"
+
+    };
+
+ 
+
+    // TODO 2: Load 'rawCard' into your Card union and print its rank and suit
+
+    // Example output format: "Queen of Spades"
+
+}
+
+ 
+
+int main() {
+
+    unsigned char deck[52];
+
+    srand((unsigned int)time(NULL));
+
+ 
+
+    // TODO 3: Populate the 'deck' array with all 52 unique cards
+
+    // Loop through suits (0 to 3) and ranks (1 to 13), pack them using
+
+    // your Card union, and store 'card.rawByte' into 'deck[index]'.
+
+ 
+
+ 
+
+    // TODO 4: Randomly select and print 5 unique cards from 'deck'
+
+    // Hint: To avoid drawing the same card twice, either shuffle the array
+
+    // (Fisher-Yates shuffle) or track which indices have already been drawn.
+
+    printf("Your 5-card hand:\n");
+
+    printf("-----------------\n");
+
+ 
+
+ 
+
+    return 0;
+
+}

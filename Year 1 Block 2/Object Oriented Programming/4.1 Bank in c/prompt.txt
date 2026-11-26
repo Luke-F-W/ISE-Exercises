@@ -1,0 +1,36 @@
+Exercise: Menu-Driven Bank Account System Using Function Pointers
+
+Objective
+
+Build a simple command-line bank account program in C that replaces traditional if/else or switch menu dispatching with an array of function pointers.
+
+Requirements
+
+    Bank Account State:
+        Start with a double balance = 1000.00; variable inside main().
+    Action Functions:
+        Implement three functions with matching signatures (void func_name(double *balance)):
+            check_balance: Prints the current account balance formatted to two decimal places.
+            deposit: Prompts the user for an amount. If positive, adds it to *balance and prints the updated balance; otherwise, prints an error message.
+            withdraw: Prompts the user for an amount. If positive and less than or equal to *balance, subtracts it and prints the updated balance; otherwise, prints an insufficient funds / invalid amount message.
+    Function Pointer Array:
+        Declare an array of 3 function pointers named menu_actions and initialize it with the addresses of check_balance, deposit, and withdraw.
+    Menu Loop:
+        Repeatedly display the following menu until the user enters 3 to exit:
+
+Plaintext
+
+--- Bank Menu ---
+
+0. Check Balance
+
+1. Deposit
+
+2. Withdraw
+
+3. Exit
+
+Select an option (0-3):
+
+        When the user enters 0, 1, or 2, invoke the corresponding function directly through the array (menu_actions[choice](&balance);) instead of using a switch statement.
+        Handle invalid numbers (anything outside 0–3) gracefully without indexing out of bounds.
